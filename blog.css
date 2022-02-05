@@ -1,0 +1,300 @@
+
+h6{
+    text-transform: uppercase;
+    
+}
+h6 a{
+    color: black;
+}
+nav {
+    display: flex;
+    background: black;
+    height: 7vh;
+  }
+  
+  nav div {
+    display: flex;
+    align-items: center;
+    flex: 50%;
+  }
+  
+  nav div.left-side {
+    padding-left: 90px;
+  }
+  
+  nav div.right-side {
+    padding-right: 90px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin-left: 40px;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-left: 40px;
+  }
+  
+  nav ul li a {
+    color: fff;
+    text-decoration: none;
+  }
+  
+  nav ul li a.list-active {
+    color: fff;
+    font-weight: 700;
+  }
+  
+  nav .right-side a {
+    font-size: 15px;
+    padding: 8px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    color:black;
+    text-decoration: none;
+  }
+
+.blog-form{
+    display: flex;
+    padding: 50px 0px;
+    justify-content: center;
+    color: rgb(104, 104, 104);
+}
+.form-container{
+    width: 500px;
+}
+h3{
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 50px;
+}
+form label{
+    font-size: 20px;
+    font-weight: 400px;
+}
+form input,textarea,select{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background: white;
+    border: 1px solid white;
+    border-radius: 8px;
+
+
+}
+
+.form2{
+    display: flex;
+    flex-direction: row;
+   gap: 30px;}
+
+textarea{
+    height: 250px;
+}
+.grup-upload{
+    width: 100%;
+    font-size: 10px;
+    font-weight: 300;
+  
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    
+}
+label span{
+    padding: 10px;
+    background-color:rgb(179, 178, 178);
+    border-radius: 8px;
+    
+   
+}
+label{
+    cursor: pointer;
+    display: flex;
+    font-size: 8px;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+
+.form4{
+    display: flex;
+    flex-direction: column;
+   padding-bottom: 20px;
+    width: 100%;
+    
+}
+.list{
+    
+    display: flex;
+    flex-direction:column;
+   justify-content: center;
+}
+.a1 {
+    
+    display: flex;
+    flex:0.5;
+    flex-direction:row;
+    gap: 50px;
+}
+.a2{
+  
+    display: flex;
+    flex:0.5;
+    flex-direction:row;
+    gap: 50px;
+    justify-content:flex-start;
+    
+}
+.check1,.check2,.check3,.check4{
+    display: flex;
+    flex: 1;
+   
+    
+}
+.check1 label{
+   
+    display: flex;
+        flex: 80%;
+      
+    }
+    .check1 input{
+        display: flex;
+        flex: 20%;
+        margin-top: 25px;
+       
+        }
+        .check2 label{
+           
+            display: flex;
+                flex: 80%;
+            }
+            .check2 input{
+                display: flex;
+                flex: 20%;
+                margin-top: 25px;
+                }
+                .check3 label{
+                  
+                    display: flex;
+                        flex: 80%;
+                    }
+                    .check3 input{
+                       
+                        display: flex;
+                        flex: 20%;
+                        margin-top: 25px;
+                        }
+                        .check4 label{
+                            
+                            display: flex;
+                                flex: 80%;
+                            }
+                            .check4 input{
+                                
+                                display: flex;
+                                flex: 20%;
+                                margin-top: 25px;
+                                }
+
+ p{
+    font-size: 20px;
+
+ }
+
+.button{
+   float: right;
+    flex: 50%;
+}
+.button button{
+    margin-top: 50px;
+    padding: 8px 20px;
+    font-size: 17px;
+    background: rgb(47, 47, 48);
+    color: white;
+    border-radius: 8px;
+    border: none;
+}
+
+.blog-list{
+    background-color: white;
+    margin-top: 80px;
+    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+
+padding: 20px;
+
+
+}
+.blog-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.blog-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+.blog-list-item{
+    width: 250px;
+    height: 350px;
+    background-color: rgb(179, 178, 178);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+}
+h6 a{
+    text-decoration: none;
+    margin: 10px,0px;
+}
+.detail-blog-content {
+    font-size: 10px;
+}p{
+    font-size: 10px;
+}
+.btn-group{
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.btn-group .btn-edit{
+   
+    padding: 5px 20px;
+    font-size: 8px;
+    background: rgb(47, 47, 48);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    flex: 1;
+}
+.btn-group .btn-post{
+   
+    padding: 5px 20px;
+    font-size: 8px;
+    background: rgb(47, 47, 48);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    flex: 1;
+}
+.sosmed img{
+    width: 18px;
+}

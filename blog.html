@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <title>
+            halaman blog
+        </title>
+        <link rel="stylesheet" href="blog.css">
+    </head>
+    <body style="background-color: rgb(243, 241, 241); margin: 0;" >
+        <nav>
+            <div class="left-side">
+              <a href="index.html">
+                <img style="height: 20px; width: 20px;" src="asset/brandwhite.png" alt="logo" />
+              </a>
+              <ul>
+                <li>
+                  <a href="profile.html" class="list-active">Home</a>
+                </li>
+                <li>
+                  <a href="blog.html" >Blog</a>
+                </li>
+              </ul>
+            </div>
+            <div class="right-side">
+              <a href="contact.html"> Contact Me </a>
+            </div>
+          </nav>
+        <div class="blog">
+            <div class="blog-form">
+
+                <div class="form-container">
+                    <form onsubmit="addBlog(event)">
+                        <h3> add my project</h3>
+                        <div class="form1">
+                            <label for="input-name-project">Project name</label>
+                            <input type="text" id="input-name-project" >
+                        </div>
+                        <div class="form2">
+                            <div class="star">
+                                <label for="input-start-date">Star date</label>
+                            <input type="date" id="input-start-date">
+                            </div>
+                            <div class="end">
+                                <label for="input-end-date">End date</label>
+                            <input type="date" id="input-end-date">
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="form3">
+                            <label for="pesan">Description</label>
+                           <textarea name="" id="pesan" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="form4">
+                            <label for="">Tehnologies</label>
+                            
+                            <div class="list">
+                                
+                                <div class="a1">
+                                    <div class="check1">
+                                    <input type="checkbox" id="node-js" name="node js" value="node js">
+                                    <label for="node-js"> node js</label>
+                                     </div>
+                                   
+                                   <div class="check2">
+                                    <input type="checkbox" id="typescript" name="typescript" value="typescript">
+                                    <label for="typescript"> type script</label>
+                                   </div>
+                                   
+                                </div>
+                                <div class="a2">
+                                    <div class="check3">
+                                        <input type="checkbox" id="react-js" name="react js" value="react js">
+                                    <label for="react-js"> react js</label>
+                                    </div>
+                                    <div class="check4">
+                                        <input type="checkbox" id="next-js" name="next js" value="next js">
+                                        <label for="next-js"> next js</label>
+                                    </div>
+                                    
+                                   
+                                 </div>
+                                 
+
+                           
+                            </div>
+                            
+                           
+                            
+                        </div>
+                        <div >
+                            <label for="" >Upload file</label>
+                           <div class="grup-upload ">
+                               <label for="upload">
+                                   <span>attance</span>
+                                   <img src="img/file.png" alt="file">
+                               </label>
+                               <input type="file"id="upload" hidden>
+                           </div>
+                        </div>
+                        <div class="button">
+                            <button type="submit">submit</button>
+                        </div>
+                        
+                    </form>
+                </div>
+                
+            </div>
+            <div id="contents" class="blog-list">
+                <!-- dynamic content would be here -->
+                <div class="blog-list-item">
+                  <div class="blog-image">
+                    <img src="img/book.jpg" alt="" />
+                  </div>
+                  <div class="blog-content">
+                      <h6>
+                          <a href="blog-detail.html" target="_blank"
+                          >Pasar Coding di Indonesia Dinilai Masih Menjanjikan</a
+                          >
+                        </h6>
+                        <div class="detail-blog-content">
+                            12 Jul 2021 22:30 WIB | Ichsan Emrald Alamsyah
+                        </div>
+                        <p>
+                            Ketimpangan sumber daya manusia (SDM) di sektor digital masih
+                            menjadi isu yang belum terpecahkan. Berdasarkan penelitian
+                           
+                        </p>
+                        <div class="sosmed">
+                            <img src="img/twitter.png" alt="">
+                            <img src="img/mail.png" alt="">
+                            <img src="img/whatsapp.png" alt="">
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn-edit">Edit Post</button>
+                            <button class="btn-post">Post Blog</button>
+                          </div>
+                  </div>
+                  
+                </div>
+            </div>
+              
+        </div>
+
+        
+
+        <script src="blog.js"></script>
+        
+    </body>
+</html>
