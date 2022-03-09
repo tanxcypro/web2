@@ -1,0 +1,43 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div id="form1">
+  <form name='test'>
+    <label><input type="checkbox" image="https://placebear.com/300/200" name="field" value="one">BASE</label>
+    <label><input type="checkbox" image="https://placebear.com/300/300" name="field" value="two">Deep Well </label>
+    <label><input type="checkbox" image="https://placebear.com/200/200" name="field" value="three">Extension </label>
+    <label><input type="checkbox" image="https://placebear.com/200/300" name="field" value="four">Treadmill</label>
+    <label><input type="checkbox" image="https://placebear.com/300/250" name="field" value="five">Stairs </label>
+  </form>
+</div>
+<div id="imagetest">
+</div>
+<script>
+  $(document).ready(function() {
+
+$('#form1 input[name=field][value]').on('click', function(e) {
+  console.log($('#form1 input[name=field][value]'));
+  var imageUrl = $(this).attr('image');
+  var fieldValue = $(this).val();
+
+  var idImage = 'image_' + fieldValue;
+  console.log(idImage);
+  if ($(this).is(':checked')) {
+    console.log($(this));
+    $('#imagetest').append('<img src="' + imageUrl + '" id="' + idImage + '">');
+  } else {
+    $('#'+idImage).remove();
+  }
+
+});
+
+$('#form1 input[name=field][value=one]').click();
+
+});
+</script>
+
+  </body>
+</html>

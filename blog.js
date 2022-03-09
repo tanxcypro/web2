@@ -1,42 +1,51 @@
 let blogs=[]
-let judul="my project"
+
 function addBlog(event) {
     event.preventDefault()
     let name=document.getElementById("input-name-project").value
     let start=document.getElementById("input-start-date").value
     let end=document.getElementById("input-end-date").value
     let pesan=document.getElementById("pesan").value
-    let jquery=document.getElementById("jquery").value
-    let js=document.getElementById("js").value
-    let node=document.getElementById("node").value
-    let react=document.getElementById("react").value
-    
+    let node=document.getElementById("pesan").value
     let image=document.getElementById("upload")
-
     image=URL.createObjectURL(image.files[0])
+   
+         // console output for demo
 
-    let hasil=start-end
+  
 
     let blog={
         name:name,
         start:new Date(start),
         end:new Date(end),
-       
+       "styles":[],
         pesan:pesan,
-        node:node,
-       jquery:jquery,
-        react:react,
-        js:js,
+      
         image:image,
         postAt:new Date()
         
 
 
     }
+  
+    var sbox = document.getElementsByName( "list" ) ;
+    blog.styles = [] // empty the array before rebuilding it
+         sbox.forEach( function( v ) {
+             if ( v.checked ) {
+                 console.log(sbox);
+               blog.styles.push( v.value );   
+               
+            
+         } );
+   
+        
+
     blogs.push(blog)
-    console.log(blog)
+    console.log(blogs)
     renderBlog()
 }
+
+
 function renderBlog(){
     let isiCOntent=document.getElementById("contents")
     isiCOntent.innerHTML=''
@@ -51,7 +60,7 @@ function renderBlog(){
                                                         </div>
                                                         <div class="blog-content">
                                                             <h6>
-                                                                <a href="blog-detail.html" target="_blank"
+                                                                <a href="/blog-detail.html/" target="_blank"
                                                                 >${blogs[i].name}</a
                                                                 >
                                                             </h6>
@@ -59,17 +68,17 @@ function renderBlog(){
                                                            Durasi: ${getDistanceTime(blogs[i].start)}
                                                             </div>
                                                             <p>
-                                                                ${blogs[i].pesan}
+                                                                ${getFullTime(blogs[i].end)}
                                                             </p>
                                                             <div class="sosmed">
-                                                                <img src="${blogs[i].jquery}" alt="">
-                                                                <img src="${blogs[i].js}" alt="">
-                                                                <img src="${blogs[i].node}" alt="">
-                                                                <img src="${blogs[i].react}" alt="">
+                                                                <img style="cursor:pointer;" src="/img2/${blogs[i].styles[0]}">
+                                                                <img src="/img2/${blogs[i].styles[1]}">
+                                                                <img src="/img2/${blogs[i].styles[2]}" >
+                                                                <img src="/img2/${blogs[i].styles[3]}" >
                                                             </div>
                                                             <div class="btn-group">
-                                                                <button class="btn-edit">Edit Post</button>
-                                                                <button class="btn-post">Post Blog</button>
+                                                                <button class="btn-edit" style="cursor:pointer;"> Edit Post</button>
+                                                                <button class="btn-post" style="cursor:pointer;">Post Blog</button>
                                                                 </div>
                                                         </div>
                                                         
@@ -85,6 +94,11 @@ function renderBlog(){
                                         </div>`
     }
 }
+
+
+
+
+
 let mounth=[
     'januari',
     'februari',
@@ -99,22 +113,7 @@ let mounth=[
     'november',
     'desember'
 ]
-function getFullTime(waktu) {
-    
-    
-    let date=waktu.getDate()
-    let mounthIndex=waktu.getMonth()
-    let years=waktu.getFullYear() 
-  
-  
 
-    
-
-   
-    let fulltime=`${date} ${mounth[mounthIndex]} ${years}`
-    return fulltime
-    
-}
 function getFullTime(waktu) {
     
     
@@ -126,7 +125,7 @@ function getFullTime(waktu) {
     let hours= waktu.getHours()
     let minutes=waktu.getMinutes()
 
-    let fulltime=`${date} ${mounth[mounthIndex]} ${years}${hours}:${minutes} wib`
+    let fulltime=`${date} ${mounth[mounthIndex]} ${years} `
     return fulltime
 }
    function getDistanceTime(waktu) {
@@ -146,7 +145,7 @@ function getFullTime(waktu) {
        let mounth=Math.floor(distance / (miliSecond*secondHours*hoursDay*daysMounth))
 
     if(mounth>=1){
-        return `${mounth} ago`
+        return `${mounth} mounth ago`
     }else{
 
         let Day=Math.floor(distance / (miliSecond*secondHours*hoursDay))
